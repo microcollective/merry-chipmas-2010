@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Merry Chipmas 2010</title>
+<style type="text/css">
+	#fadeIn{position: absolute;top: 10px;left: 10px;}
+	#fadeInFadeOut{position: absolute;top: 10px;left: 100px;}
+
+	#wrapper{width: 600px; height: 799px; background-color:#0099FF; border: 5px solid #FFFFFF;}
+
+	#wrapper > *{margin-right: 10px; width: 100px; height: 100px;
+				float: left; display: none;}
+
+	#box1{width:600px; height: 338px}
+	#box2{width:526px; height: 406px}
+	#box3{with: 600px; height: 55px}
+
+body {
+	margin-left: 20px;
+	margin-top: 20px;
+	margin-right: 0px;
+	margin-bottom: 20px;
+	background-color: #333333;
+}
+</style>
+<SCRIPT language="JavaScript">
+<!--
+if (document.images)
+{
+  pic1= new Image(600,304); 
+  pic1.src="web.gif"; 
+
+  pic2= new Image(526,406); 
+  pic2.src="tracklist.gif"; 
+
+  pic3= new Image(600,55); 
+  pic3.src="download.gif"; 
+}
+//-->
+</SCRIPT>
+<script type='text/javascript' src='http://code.jquery.com/jquery-1.4.2.min.js'></script>
+<script type="text/javascript" src="fadeinsequence.js"></script>
+
+<script type='text/javascript'>
+$(function(){ 
+
+$("window").ready(function() {
+	$("#wrapper").children().hide().fadeInSequence();
+	});
+
+$("#fadeInFadeOut").click(function() {
+	$("#wrapper").children().hide().fadeInSequence().fadeOut();
+	});
+
+});
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="shortcut icon" href="fav.ico" type="image/x-icon" />
+</head>
+
+<body>
+<div id="wrapper">
+	<div id="box1">
+	<img src="web.gif" width="600" height="338" />
+	</div>
+	<div id="box2">
+	<img src="tracklist.gif" width="526" height="406" />
+	</div>
+	<div id="box3">
+    <img src="download.gif" width="600" height="55" border="0" usemap="#Map" /></td>
+	</div>
+</div>
+<map name="Map" id="Map">
+  <area shape="rect" coords="10,18,108,38" href="mc2010.zip" />
+</map>
+</body>
+</html>
